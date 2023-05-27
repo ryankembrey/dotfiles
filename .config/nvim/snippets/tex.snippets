@@ -1,0 +1,142 @@
+snippet beg
+	\begin{$1}
+		$2
+	\end{$1}
+snippet bf 
+	\textbf{$1} $0
+snippet it
+	\textit{$1} $0
+snippet eq
+	\begin{equation}
+		$1 = $2
+	\end{equation}
+	$0
+snippet fig
+	\begin{figure}[htbp]
+		\centering
+		\includegraphics[width=$1\textwidth]{./figures/$2}
+		\caption{$3}
+		\label{fig:${2/\....//g}}
+	\end{figure}
+	$0
+snippet tab
+	\begin{table}[htbp]
+		\centering
+		\captionsetup{skip=0.5ex} % Reduce the space between figure and caption
+		\caption{$1}
+		\begin{tabular}{$2}
+			\toprule
+			\rowcolor{LightGray}
+			$3 \\
+			\midrule
+			$0
+			\bottomrule
+		\end{tabular}
+	\end{table}snippet cite
+	\cite{$1} $0
+snippet ref
+	\ref{$1} $0
+snippet lst
+	\begin{lstlisting}[language=$1]
+		$0
+	\end{lstlisting}
+snippet item
+	\item $0
+snippet sec
+	\section{$1}
+	$0
+snippet ssec
+	\subsection{$1}
+	$0
+snippet sssec
+	\subsubsection{$1}
+	$0
+snippet ch
+	\chapter{$1}
+	$0
+snippet align
+	\begin{align*}
+		$1
+	\end{align*}
+	$0
+snippet fr
+	\frac{$1}{$2}
+	$0
+snippet minifig
+	\begin{figure}[H]
+		\centering
+		\begin{minipage}[b]{0.45\textwidth}
+			\centering
+			\fbox{\includegraphics[width=${1:0.95}\textwidth]{./figures/$2}}
+			\captionsetup{skip=0.5ex} 
+			\caption{$3}
+			\label{fig:${2/\....//g}}
+		\end{minipage}
+		\hfill
+		\begin{minipage}[b]{0.45\textwidth}
+			\centering
+			\fbox{\includegraphics[width=${1:0.95}\textwidth]{./figures/$5}}
+			\captionsetup{skip=0.5ex} 
+			\caption{$6}
+			\label{fig:${5/\....//g}}
+		\end{minipage}
+	\end{figure}
+	$0
+snippet subfig
+	\begin{figure}[htbp]
+		\centering
+		\begin{subfigure}[b]{0.45\textwidth}
+			\centering
+			\fbox{\includegraphics[width=${1:0.9}\textwidth]{./figures/$2}}
+			\caption{$3}
+			\label{fig:${2/\....//g}}
+		\end{subfigure}
+		\hfill
+		\begin{subfigure}[b]{0.45\textwidth}
+			\centering
+			\fbox{\includegraphics[width=${1:0.9}\textwidth]{./figures/$4}}
+			\caption{$5}
+			\label{fig:${4/\....//g}}
+		\end{subfigure}
+	\end{figure}
+	$0
+
+snippet titlepage
+	\begin{titlepage}
+		\begin{tikzpicture}[remember picture, overlay]
+      		\draw[line width = 2pt] ($(current page.north west) + (1cm,-1cm)$) rectangle ($(current page.south east) + (-1cm,1cm)$);
+    	\end{tikzpicture}
+    	\begin{center}
+      		\Huge
+      		\textbf{${1:TITLE}}
+
+      		\vspace{0.5cm}
+      
+      		\LARGE
+      		${2:SUBTITLE}
+
+      		\vspace{1cm}
+      
+      		\textbf{${3:Ryan Kembrey}}
+      		\begin{figure}[htbp!]
+        		\centering 
+        		\includegraphics[width=0.7\textwidth]{./figures/$4}
+        		\label{fig:${4/\....//g}}
+      		\end{figure}
+      
+			${5:TASK} \\\\
+    		${6:CLASS}      
+      		\vspace{0.6cm}
+      
+      		\includegraphics[width=0.3\textwidth]{~/templates/latex/figures/uts_logo.png}
+      
+      		\Large
+      		Mechanical Engineering\\\\
+      		University Of Technology Sydney\\\\
+      		Australia\\\\
+      		\vfill 
+      		\today
+      		\vfill 
+      	\end{center}
+	\end{titlepage}
+	$0
