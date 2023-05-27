@@ -1,0 +1,84 @@
+# Python Snippets
+snippet for
+	for ${1:item} in ${2:iterable}:
+		${3:# code}
+snippet while
+	while ${1:condition}:
+		${2:# code}
+snippet if
+	if ${1:condition}:
+		${2:# code}
+snippet ifelse
+	if ${1:condition}:
+		${2:# code}
+	else:
+		${3:# code}
+snippet def
+	def ${1:function_name}(${2:arguments}):
+		${3:# code}
+		${4:return}
+snippet class
+	class ${1:ClassName}(${2:ParentClass}):
+		def __init__(self, ${3:arguments}):
+			${4:# code}
+snippet print
+	print(${1:message})
+snippet try
+	try:
+		${1:# code}
+	except ${2:Exception} as ${3:error}:
+		${4:# code}
+snippet main
+	if __name__ == "__main__":
+		${1:# code}
+
+# NumPy Snippets
+snippet np
+	import numpy as np
+snippet nparr
+	np.array(${1:data})
+snippet npzeros
+	np.zeros(${1:shape})
+snippet npones
+	np.ones(${1:shape})
+snippet npfull
+	np.full(${1:shape}, ${2:value})
+snippet nplinspace
+	np.linspace(${1:start}, ${2:stop}, ${3:num})
+snippet nparange
+	np.arange(${1:start}, ${2:stop}, ${3:step})
+snippet npreshape
+	np.reshape(${1:array}, (${2:shape}))
+snippet npsqueeze
+	np.squeeze(${1:array})
+snippet nprandom
+	np.random.${1:method}(${2:arguments})
+
+# Matplotlib Snippets
+snippet plt
+	import matplotlib.pyplot as plt
+snippet pltfig
+	plt.figure()
+snippet pltplot
+	plt.plot(${1:x}, ${2:y}, ${3:fmt})
+snippet pltscatter
+	plt.scatter(${1:x}, ${2:y}, ${3:s})
+snippet pltbar
+	plt.bar(${1:x}, ${2:height}, ${3:width})
+snippet plthist
+	plt.hist(${1:x}, ${2:bins})
+snippet pltimshow
+	plt.imshow(${1:image})
+snippet plttitle
+	plt.title(${1:title})
+snippet pltxlabel
+	plt.xlabel(${1:label})
+snippet pltylabel
+	plt.ylabel(${1:label})
+snippet pltlegend
+	plt.legend(${1:labels})
+snippet pltgrid
+	plt.grid(${1:bool})
+snippet pltshow
+	plt.show()
+
